@@ -1,4 +1,5 @@
 import express from 'express';
+import HomeController from "../controllers/HomeController"
 
 
 
@@ -6,9 +7,7 @@ import express from 'express';
 
 const router = express.Router();
 const initWebRoutes = (app) => { 
-    router.get('/',(req , res) => {
-        return res.send('hello word')
-    } );
+    router.post('/api/login', HomeController.handleLogin);
  
 
     
